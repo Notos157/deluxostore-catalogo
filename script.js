@@ -1,0 +1,1 @@
+function openModal(i){document.getElementById('m'+i).style.display='flex'} function closeModal(i){document.getElementById('m'+i).style.display='none'} window.onclick=e=>{if(e.target.classList.contains('modal'))e.target.style.display='none'}

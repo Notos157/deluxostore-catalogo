@@ -1,0 +1,330 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES RESET E GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0d0d0f; 
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. BANNER SUPERIOR RETANGULAR
+   ========================================================================== */
+.banner-topo {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   3. ESTRUTURA PRINCIPAL (DUAS COLUNAS PERFEITAS)
+   ========================================================================== */
+.main-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 25px auto 50px auto;
+    padding: 0 20px;
+    gap: 25px;
+    align-items: flex-start; 
+}
+
+/* MENU LATERAL */
+.sidebar {
+    width: 260px;
+    flex-shrink: 0;
+    background: #141419;
+    border-radius: 12px;
+    padding: 15px 10px;
+    border: 1px solid #1f1f26;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 6px;
+}
+
+.sidebar li a {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    color: #b5b5be;
+    text-decoration: none;
+    font-size: 0.92em;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.sidebar li a:hover, 
+.sidebar li.active a {
+    background: #1c1c24;
+    color: #ff5533;
+}
+
+.sidebar .icon {
+    margin-right: 12px;
+    font-size: 1.1em;
+}
+
+.content-area {
+    flex-grow: 1;
+}
+
+/* ==========================================================================
+   4. GRADE DE PRODUTOS E CARDS PARALELOS
+   ========================================================================== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #141419;
+    border: 1px solid #1f1f26;
+    border-radius: 12px;
+    padding: 24px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px; /* Garante tamanho idêntico em todas as caixas */
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #ff5533;
+}
+
+.card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.card h3 {
+    font-size: 1.05em;
+    color: #ffffff;
+    margin: 5px 0 10px 0;
+    font-weight: 600;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* PREÇOS */
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto; 
+    margin-bottom: 12px;
+}
+
+.price-old {
+    color: #7c7c8a;
+    text-decoration: line-through;
+    font-size: 0.88em;
+}
+
+.price-green {
+    color: #00e676; /* Tom verde brilhante solicitado */
+    font-weight: 700;
+    font-size: 1.15em;
+}
+
+.add-to-cart-btn {
+    background: #ff5500;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+    width: 100%;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background: #e64d00;
+}
+
+/* ==========================================================================
+   5. MODAIS E AJUSTE DE LISTAS EM TÓPICOS (PRINT DO USUÁRIO)
+   ========================================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(8, 8, 10, 0.9);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    padding: 20px;
+}
+
+.box {
+    background: #141419;
+    border: 1px solid #1f1f26;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    max-width: 750px;
+    width: 100%;
+    position: relative;
+}
+
+.box img {
+    width: 240px;
+    height: 240px;
+    object-fit: contain;
+    background: #0d0d0f;
+    border-radius: 8px;
+}
+
+.box > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.box h2 {
+    color: #ff5533;
+    margin: 0 0 10px 0;
+}
+
+.box p {
+    color: #a5a5b2;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Estilo para alinhar os tópicos com bolinhas ordenadas */
+.modal-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    color: #ffffff; /* Deixa o texto dos tópicos mais legível */
+}
+
+.modal-list li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #7c7c8a;
+}
+
+.close:hover {
+    color: #ffffff;
+}
+
+.buy-btn {
+    background: #ff5500;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDADE (APENAS ESTA SEÇÃO FOI ALTERADA PARA O MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .banner-topo {
+        padding: 10px 10px 0 10px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        margin: 15px auto;
+        padding: 0 10px;
+    }
+
+    .sidebar {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .sidebar ul {
+        display: flex;
+        gap: 8px;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+        white-space: nowrap;
+    }
+
+    /* FORÇA 2 COLUNAS DE PRODUTOS NO CELULAR */
+    .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px; 
+    }
+
+    /* Ajustes leves de tamanho para os cards caberem lado a lado no celular */
+    .card {
+        height: auto; 
+        padding: 15px 10px;
+    }
+
+    .card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .card h3 {
+        font-size: 0.9em;
+        min-height: 38px;
+    }
+
+    .box {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .box img {
+        width: 100%;
+        height: auto;
+    }
+}
