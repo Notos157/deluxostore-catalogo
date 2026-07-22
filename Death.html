@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja - Nova Capital</title>
     <link href="style.css" rel="stylesheet"/>
-     <link rel="icon" type="image/png" href="images/CIMA.png"/>
+    <link rel="icon" type="image/png" href="images/CIMA.png"/>
 </head>
 <body>
 
@@ -20,68 +20,186 @@
             <ul>
                 <li class="active"><a href="Death.html"><span class="icon">⚽</span> Death Ball</a></li>
                 <li><a href="Grow.html"><span class="icon">🌱</span> Grow a Garden 2</a></li>
-
             </ul>
         </nav>
     </aside>
 
     <main class="content-area">
         <div class="grid">
+            <!-- P1 -->
             <div class="card" onclick="openModal(1)">
                 <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Produto+1'" src="images/gema1.png"/>
                 <h3>1M Gemas</h3>
                 <div class="price-container">
                     <span class="price-green">R$ 2,00</span>
                 </div>
-       <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+                <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
             </div>
             
+            <!-- P2 -->
             <div class="card" onclick="openModal(2)">
                 <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Produto+2'" src="images/gema.png"/>
                 <h3>5M Gemas</h3>
                 <div class="price-container">
                     <span class="price-green">R$ 10,00</span>
                 </div>
-               <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+                <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
             </div>
             
+            <!-- P3 -->
             <div class="card" onclick="openModal(3)">
                 <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Mansao'" src="images/gema3.png"/>
                 <h3>10M Gemas</h3>
                 <div class="price-container">
                     <span class="price-green">R$ 20,00</span>
                 </div>
-                 <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+                <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
             </div>
 
+            <!-- P4 -->
             <div class="card" onclick="openModal(4)">
                 <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Produto+4'" src="images/gema4.png"/>
                 <h3>25M Gemas</h3>
                 <div class="price-container">
                     <span class="price-green">R$ 50,00</span>
                 </div>
-                    <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+                <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
             </div>
 
+            <!-- P5 -->
             <div class="card" onclick="openModal(5)">
                 <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Produto+5'" src="images/gema5.png"/>
                 <h3>50M Gemas</h3>
                 <div class="price-container">
-                <span class="price-green">R$ 100,00</span>
+                    <span class="price-green">R$ 100,00</span>
                 </div>
                 <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
             </div>
 
-            <div class="card" onclick="openModal(5)">
-                <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Produto+5'" src="images/vip.png"/>
+            <!-- P6 -->
+            <div class="card" onclick="openModal(6)">
+                <img onerror="this.src='https://placehold.co/300x300/1a1a22/fff?text=Produto+6'" src="images/vip.png"/>
                 <h3>Assinatura VIP</h3>
                 <div class="price-container">
-                <span class="price-green">R$ 14,00</span>
+                    <span class="price-green">R$ 14,00</span>
                 </div>
                 <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
             </div>
-
-    
+        </div>
     </main>
 </div>
 
+<!-- ================= MODAIS DETALHADOS ================= -->
+
+<div class="modal" id="m1">
+    <div class="box">
+        <span class="close" onclick="closeModal(1)">×</span>
+        <img onerror="this.src='https://placehold.co/500x500/121216/fff?text=Produto+1'" src="images/gema1.png"/>
+        <div>
+            <h2>1M Gemas</h2>
+            <ul class="modal-list">
+                <li>💎 1.000.000 Gemas</li>
+                <li>➝ Duração: Imediato / Até o wipe</li>
+            </ul>
+            <div class="price-container">
+                <span class="price-green">R$ 2,00</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="m2">
+    <div class="box">
+        <span class="close" onclick="closeModal(2)">×</span>
+        <img onerror="this.src='https://placehold.co/500x500/121216/fff?text=Produto+2'" src="images/gema.png"/>
+        <div>
+            <h2>5M Gemas</h2>
+            <ul class="modal-list">
+                <li>💎 5.000.000 Gemas</li>
+                <li>➝ Duração: Imediato / Até o wipe</li>
+            </ul>
+            <div class="price-container">
+                <span class="price-green">R$ 10,00</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="m3">
+    <div class="box">
+        <span class="close" onclick="closeModal(3)">×</span>
+        <img onerror="this.src='https://placehold.co/500x500/121216/fff?text=Mansao'" src="images/gema3.png"/>
+        <div>
+            <h2>10M Gemas</h2>
+            <ul class="modal-list">
+                <li>💎 10.000.000 Gemas</li>
+                <li>➝ Duração: Imediato / Até o wipe</li>
+            </ul>
+            <div class="price-container">
+                <span class="price-green">R$ 20,00</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="m4">
+    <div class="box">
+        <span class="close" onclick="closeModal(4)">×</span>
+        <img onerror="this.src='https://placehold.co/500x500/121216/fff?text=Produto+4'" src="images/gema4.png"/>
+        <div>
+            <h2>25M Gemas</h2>
+            <ul class="modal-list">
+                <li>💎 25.000.000 Gemas</li>
+                <li>➝ Duração: Imediato / Até o wipe</li>
+            </ul>
+            <div class="price-container">
+                <span class="price-green">R$ 50,00</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="m5">
+    <div class="box">
+        <span class="close" onclick="closeModal(5)">×</span>
+        <img onerror="this.src='https://placehold.co/500x500/121216/fff?text=Produto+5'" src="images/gema5.png"/>
+        <div>
+            <h2>50M Gemas</h2>
+            <ul class="modal-list">
+                <li>💎 50.000.000 Gemas</li>
+                <li>➝ Duração: Imediato / Até o wipe</li>
+            </ul>
+            <div class="price-container">
+                <span class="price-green">R$ 100,00</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="m6">
+    <div class="box">
+        <span class="close" onclick="closeModal(6)">×</span>
+        <img onerror="this.src='https://placehold.co/500x500/121216/fff?text=Produto+6'" src="images/vip.png"/>
+        <div>
+            <h2>Assinatura VIP</h2>
+            <ul class="modal-list">
+                <li>⭐ Cargo/Benefícios VIP no Death Ball</li>
+                <li>➝ Duração: Até o wipe</li>
+            </ul>
+            <div class="price-container">
+                <span class="price-green">R$ 14,00</span>
+            </div>
+            <button class="buy-btn" onclick="window.open('https://discord.com/channels/1528140827321438259/1528398681198428341', '_blank')">COMPRAR AGORA</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
