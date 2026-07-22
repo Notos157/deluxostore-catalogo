@@ -1,6 +1,4 @@
-// ==========================================================================
-// SISTEMA DE MODAIS (ABRIR E FECHAR)
-// ==========================================================================
+// Função para abrir o modal de um produto específico
 function openModal(id) {
     const modal = document.getElementById('m' + id);
     if (modal) {
@@ -8,6 +6,7 @@ function openModal(id) {
     }
 }
 
+// Função para fechar o modal de um produto específico
 function closeModal(id) {
     const modal = document.getElementById('m' + id);
     if (modal) {
@@ -15,9 +14,9 @@ function closeModal(id) {
     }
 }
 
-// Fechar modal ao clicar fora da caixa principal
-window.addEventListener('click', e => {
-    if (e.target.classList.contains('modal')) {
-        e.target.style.display = 'none';
+// Fecha o modal caso o usuário clique fora da caixa de conteúdo (no fundo escuro)
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = 'none';
     }
-});
+}
